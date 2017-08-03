@@ -14,6 +14,7 @@
 		CED1F5AA1F29F59900F09F88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED1F5A81F29F59900F09F88 /* LaunchScreen.storyboard */; };
 		CED1F5B51F29F59A00F09F88 /* SecondKadaiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1F5B41F29F59A00F09F88 /* SecondKadaiAppTests.swift */; };
 		CED1F5C01F29F59A00F09F88 /* SecondKadaiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1F5BF1F29F59A00F09F88 /* SecondKadaiAppUITests.swift */; };
+		CED1F5CE1F29F79800F09F88 /* AisatsuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1F5CD1F29F79800F09F88 /* AisatsuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CED1F5BB1F29F59A00F09F88 /* SecondKadaiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecondKadaiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED1F5BF1F29F59A00F09F88 /* SecondKadaiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondKadaiAppUITests.swift; sourceTree = "<group>"; };
 		CED1F5C11F29F59A00F09F88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED1F5CD1F29F79800F09F88 /* AisatsuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AisatsuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				CED1F59F1F29F59900F09F88 /* AppDelegate.swift */,
 				CED1F5A11F29F59900F09F88 /* ViewController.swift */,
 				CED1F5A31F29F59900F09F88 /* Main.storyboard */,
+				CED1F5CD1F29F79800F09F88 /* AisatsuViewController.swift */,
 				CED1F5A61F29F59900F09F88 /* Assets.xcassets */,
 				CED1F5A81F29F59900F09F88 /* LaunchScreen.storyboard */,
 				CED1F5AB1F29F59900F09F88 /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED1F5A21F29F59900F09F88 /* ViewController.swift in Sources */,
+				CED1F5CE1F29F79800F09F88 /* AisatsuViewController.swift in Sources */,
 				CED1F5A01F29F59900F09F88 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

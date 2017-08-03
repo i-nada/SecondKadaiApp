@@ -1,26 +1,108 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmy-QB-V1V">
+                                <rect key="frame" x="64.5" y="100" width="191" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" layoutMarginsFollowReadableWidth="NO"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecw-Gc-ho0">
+                                <rect key="frame" x="129" y="200" width="62" height="30"/>
+                                <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <segue destination="lnS-HC-t6p" kind="show" id="y6M-m1-EBb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biy-jA-nXI" userLabel="こちらに記入">
+                                <rect key="frame" x="147" y="150" width="25" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" layoutMarginsFollowReadableWidth="NO"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="biy-jA-nXI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V4j-Kf-v3p"/>
+                            <constraint firstItem="ecw-Gc-ho0" firstAttribute="top" secondItem="biy-jA-nXI" secondAttribute="bottom" constant="20" id="Z9c-5q-tcn"/>
+                            <constraint firstItem="mmy-QB-V1V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="ZVb-vS-g12"/>
+                            <constraint firstItem="biy-jA-nXI" firstAttribute="top" secondItem="mmy-QB-V1V" secondAttribute="bottom" constant="30" id="gdY-6b-LKb"/>
+                            <constraint firstItem="ecw-Gc-ho0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i8n-CK-G3z"/>
+                            <constraint firstItem="mmy-QB-V1V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oXa-1V-E1r"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userTxt" destination="biy-jA-nXI" id="Nwc-SW-d7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="38.23088455772114"/>
+        </scene>
+        <!--Aisatsu View Controller-->
+        <scene sceneID="07D-Qj-JM6">
+            <objects>
+                <viewController id="lnS-HC-t6p" customClass="AisatsuViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uGs-fv-w6Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="n6U-4J-1L1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h6V-wm-olM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-7F-oMM">
+                                <rect key="frame" x="139" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3f-zR-X5H">
+                                <rect key="frame" x="144" y="171" width="31" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="xSZ-h8-QBl" kind="unwind" unwindAction="modoru:" id="iRO-W1-IuF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u3f-zR-X5H" firstAttribute="centerX" secondItem="h6V-wm-olM" secondAttribute="centerX" id="CXj-Ao-28c"/>
+                            <constraint firstItem="jaG-7F-oMM" firstAttribute="centerX" secondItem="h6V-wm-olM" secondAttribute="centerX" id="DdC-4c-bUw"/>
+                            <constraint firstItem="u3f-zR-X5H" firstAttribute="top" secondItem="jaG-7F-oMM" secondAttribute="bottom" constant="30" id="X1c-6E-I7T"/>
+                            <constraint firstItem="jaG-7F-oMM" firstAttribute="top" secondItem="uGs-fv-w6Z" secondAttribute="bottom" constant="100" id="mrr-E4-HsP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="jaG-7F-oMM" id="fO5-WF-Mpw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hP-vW-BdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xSZ-h8-QBl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="158"/>
         </scene>
     </scenes>
 </document>
